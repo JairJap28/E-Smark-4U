@@ -1,0 +1,58 @@
+<div class="mx-auto cases">
+    <h2>Casos de Éxito</h2>
+    <p>
+        Conoce importantes empresas de diferentes mercados que han logrado incrementar sus ventas gracias a los servicios brindados por E-Smark 4U.
+    </p>
+</div>
+
+<div class="container">
+    <hr>
+    <div class="row align-items-center cases__item" *ngFor="let item of listCompanies">
+        <div class="col-2">
+            <img [src]="item.img" alt="item.name" class="img-fluid">
+            <img src="../../../assets/cases/starts.png" alt="Estrellas valoración" class="img-fluid">
+        </div>
+        <div class="col-10">
+            <p>"{{ item.description | shortDescription }}"</p>
+            <div class="cases__showMore">
+                <button type="button" class="btn btn-secondary btn-sm btn-block" data-toggle="modal" data-target="#cases__body" (click)="showCompany(item)">Ver más</button>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="cases__body" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">{{ company?.name }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <fa-icon [icon]="faTimes" style="color: white;"></fa-icon>
+                </button>
+            </div>
+            <div class="modal-body cases__company__body">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 cases__company">
+                            <img src={{company?.img}} alt="company?.name" class="img-fluid">
+                        </div>
+                        <div class="col-12">
+                            {{ company?.description }}
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary cases__company__next" (click)="showNextCompany()">
+                  <fa-icon [icon]="faCaretRight" style="color: white;"></fa-icon>
+                </button>
+                <button type="button" class="btn btn-secondary cases__company__previous" (click)="showPreviosCompany()">
+                  <fa-icon [icon]="faCaretRight" style="color: white;" class="cases__btn__icon"></fa-icon>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-sm btn-block cases__company__contact">Contactar</button>
+            </div>
+        </div>
+    </div>
+</div>

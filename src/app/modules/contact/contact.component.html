@@ -1,0 +1,66 @@
+<div class="contact__header">
+    <h4 class="contact__tittle">Haz contacto con nosotros</h4>
+</div>
+
+<div class="contact__body">
+    <div class="contact__form">
+        <div>
+            <div class="input-group">
+                <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nombre">
+                <div class="input-group-text">
+                    <fa-icon [icon]="faUser" style="color: gray;"></fa-icon>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="email" class="form-control" id="autoSizingInputGroup" placeholder="Email">
+                <div class="input-group-text">
+                    <fa-icon [icon]="faAt" style="color: gray;"></fa-icon>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="number" class="form-control" id="autoSizingInputGroup" placeholder="Telefono">
+                <div class="input-group-text">
+                    <fa-icon [icon]="faPhone" style="color: gray;"></fa-icon>
+                </div>
+            </div>
+            <div class="input-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Mensaje"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary contact__btn__sendMessage">
+              <span>Dejanos contactarte</span>
+            </button>
+        </div>
+    </div>
+    <div class="contact__qr">
+        <img src="../../../assets/qr.png" alt="QR WhatsApp">
+        <div class="contact__qr__info">
+            <div>
+                <h3>Llamanos al:</h3>
+                <h5>(+57) 304 307 6015</h5>
+            </div>
+            <hr>
+            <div>
+                <h3>Envianos un correo:</h3>
+                <h5>emarkett4u@gmail.com</h5>
+            </div>
+            <hr>
+            <div>
+                <h3>Encuentranos en:</h3>
+                <div class="contact__qr__networks">
+                    <a href="https://www.facebook.com/ESmark4U" target="_blank">
+                        <img src="../../../assets/facebookIcon.png" alt="Facebook Icon" class="img-fluid">
+                    </a>
+                    <a href="https://www.instagram.com/e_smark_4u/" target="_blank">
+                        <img src="../../../assets/InstagramIcon.png" alt="Instagram Icon" class="img-fluid">
+                    </a>
+                    <a href="https://api.whatsapp.com/message/6XL7PH75FHOPO1" target="_blank">
+                        <img src="../../../assets/whatsappIcon.jpg" alt="WhatsApp Icon" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact__map">
+        <app-map></app-map>
+    </div>
+</div>

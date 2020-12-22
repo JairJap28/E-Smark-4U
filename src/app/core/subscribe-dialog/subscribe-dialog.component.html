@@ -1,0 +1,66 @@
+<div class="modal fade" tabindex="-1" aria-hidden="true" id="subscribeModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Queremos hablar contigo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Para <strong>E-Smark 4U</strong>, tu eres muy importante, no dejes pasar la oportunidad y dejanos contactarte.</p>
+                <form class="row g-3">
+                    <div class="col-md-12">
+                        <label for="inputName" class="form-label">Nombre</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <fa-icon [icon]="faUser" style="color: gray;"></fa-icon>
+                            </div>
+                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Rachel Beltran">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputName" class="form-label">Correo electonico</label>
+                        <div class="input-group">
+                            <div class="input-group-text">@</div>
+                            <input type="email" class="form-control" id="autoSizingInputGroup" placeholder="Example@esmark.com">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPhone" class="form-label">Celular</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <fa-icon [icon]="faPhone" style="color: gray;"></fa-icon>
+                            </div>
+                            <input type="number" class="form-control" id="autoSizingInputGroup" placeholder="555-555-5555">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">País</label>
+                        <select id="inputCity" class="form-select" (change)="getCity($event.target.value)">
+                          <option selected>Otro</option>
+                          <option *ngFor="let item of listCountries">{{ item.name }}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputState" class="form-label">Ciudad</label>
+                        <select id="inputState" class="form-select">
+                          <option selected>Otro</option>
+                          <option *ngFor="let item of listCities">{{item}}</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                          ¿Te gustaría que te contactemos por WhatsApp?
+                        </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary dialog__btn__subscribe" data-bs-dismiss="modal">Suscribirme</button>
+            </div>
+        </div>
+    </div>
+</div>
