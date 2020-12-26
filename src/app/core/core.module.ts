@@ -6,11 +6,12 @@ import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaqComponent } from './faq/faq.component';
 import { SubscribeDialogComponent } from './subscribe-dialog/subscribe-dialog.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, FaqComponent, SubscribeDialogComponent],
+  declarations: [FooterComponent, HeaderComponent, FaqComponent, SubscribeDialogComponent, ChatbotComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -20,7 +21,8 @@ import { SubscribeDialogComponent } from './subscribe-dialog/subscribe-dialog.co
     HeaderComponent,
     FaqComponent,
     FooterComponent,
-    SubscribeDialogComponent
+    SubscribeDialogComponent,
+    ChatbotComponent
   ]
 })
 export class CoreModule { }

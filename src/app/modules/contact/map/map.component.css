@@ -21,3 +21,10 @@
         margin: 0;
     }
 }
+
+@media only screen and (max-width: 645px) {
+    .map-container {
+        height: 400px;
+        padding-bottom: 20px;
+    }
+}

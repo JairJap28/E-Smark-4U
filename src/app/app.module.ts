@@ -6,12 +6,11 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeModule } from './modules/home/home.module';
-import { AboutUsComponent } from './modules/about-us/about-us.component';
-import { SuccessCasesComponent } from './modules/success-cases/success-cases.component';
 import { ContactModule } from './modules/contact/contact.module';
 import { AboutUsModule } from './modules/about-us/about-us.module';
 import { ProductsModule } from './modules/products/products.module';
 import { SuccessCasesModule } from './modules/success-cases/success-cases.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,8 @@ import { SuccessCasesModule } from './modules/success-cases/success-cases.module
     ProductsModule,
     SuccessCasesModule,
     ContactModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

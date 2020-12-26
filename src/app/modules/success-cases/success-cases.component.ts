@@ -1,14 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, transition, animate, query} from '@angular/animations';
 import CaseEntity from './CaseEntity';
-
-
 import { faCaretRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 
+const ShakeAnimation = [
+	style({ transform: 'rotate(0)' }),
+	animate('0.1s', style({ transform: 'rotate(2deg)' })),
+	animate('0.1s', style({ transform: 'rotate(-2deg)' })),
+	animate('0.1s', style({ transform: 'rotate(2deg)' })),
+	animate('0.1s', style({ transform: 'rotate(0)' })),
+];
+export const QueryShake = [
+	trigger('queryShake', [
+		transition('* => default', ShakeAnimation),
+	]),
+];
 
 @Component({
   selector: 'app-success-cases',
   templateUrl: './success-cases.component.html',
-  styleUrls: ['./success-cases.component.css']
+  styleUrls: ['./success-cases.component.css'],
+  animations: [
+    trigger('BottomEnter', [
+      state('enter', style({ transform: 'translateY(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateY(150%)' }),
+        animate('1s 300ms ease-in')
+      ])
+    ])
+  ]
 })
 export class SuccessCasesComponent implements OnInit {
   faCaretRight = faCaretRight;

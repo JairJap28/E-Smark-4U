@@ -1,8 +1,9 @@
 nav {
     width: 80%;
-    margin-top: 10px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    position: relative;
+    top: 10px;
 }
 
 li {

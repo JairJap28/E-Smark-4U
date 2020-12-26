@@ -5,9 +5,9 @@
     </p>
 </div>
 
-<div class="container">
+<div class="container" [@BottomEnter]>
     <hr>
-    <div class="row align-items-center cases__item" *ngFor="let item of listCompanies">
+    <div class="row align-items-center cases__item" *ngFor="let item of listCompanies; let i = index">
         <div class="col-2">
             <img [src]="item.img" alt="item.name" class="img-fluid">
             <img src="../../../assets/cases/starts.png" alt="Estrellas valoración" class="img-fluid">

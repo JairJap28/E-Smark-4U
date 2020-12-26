@@ -46,7 +46,6 @@
         display: none;
     }
     .app__content {
-        width: 90%;
-        margin: 20px 10px auto;
+        width: 95%;
     }
 }

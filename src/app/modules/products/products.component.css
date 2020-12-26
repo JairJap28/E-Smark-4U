@@ -17,3 +17,5 @@
 .products__card__title {
     margin-top: 15px;
 }
+
+@media (max-width: 768px) {}

@@ -120,10 +120,20 @@
 }
 
 @media (max-width: 768px) {
+    .contact__header {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 0;
+    }
     .contact__body {
         display: block;
         margin-top: 5px;
-        padding-left: 20px;
+        padding-left: 0;
+        height: 100%;
+    }
+    .contact__form {
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
     .contact__form::after,
     .contact__qr::after {
@@ -131,16 +141,28 @@
         display: none;
     }
     .contact__btn__sendMessage {
-        width: calc(100% - 40px);
-        bottom: -10px;
-        left: 10px;
-        right: 20px;
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
     }
     .contact__qr img {
-        max-width: 100%;
+        width: 50%;
     }
     .contact__qr__info {
         position: relative;
         overflow: auto;
+    }
+    .contact__qr>div {
+        display: flex;
+        flex-direction: row;
+    }
+    .contact__map {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .contact__qr .contact__qrCode {
+        display: none;
     }
 }
