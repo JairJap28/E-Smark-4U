@@ -1,0 +1,51 @@
+.app__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.app__header img {
+    width: 70px;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.app__header app-header {
+    width: calc(100% - 60px);
+}
+
+.app__content {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.faq__btn {
+    position: absolute;
+    right: -40px;
+    top: 40%;
+}
+
+.faq__icon {
+    transform: rotate(-90deg);
+    width: 64px;
+}
+
+.faq__btn:hover {
+    right: -20px;
+    transition: transform 1.5s ease-in-out;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .app__header img {
+        display: none;
+    }
+    .app__header app-header {
+        width: 100%;
+    }
+    .app-faq {
+        display: none;
+    }
+    .app__content {
+        width: 95%;
+    }
+}

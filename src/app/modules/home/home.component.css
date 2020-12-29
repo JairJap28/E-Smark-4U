@@ -1,0 +1,27 @@
+video {
+    width: 100%;
+    max-width: 380px;
+}
+
+.home__btn__contactanos {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    background-color: #41A8E8 !important;
+}
+
+.home__description {
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    video {
+        max-width: 100%;
+    }
+    .home__btn__contactanos {
+        margin-top: 20px;
+    }
+    .home__description {
+        margin-top: 10px;
+    }
+}

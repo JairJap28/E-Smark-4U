@@ -1,0 +1,12 @@
+.faq__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq__header input {
+    width: 380px;
+}
+
+.modal-header .btn-close {
+    margin: 0;
+}

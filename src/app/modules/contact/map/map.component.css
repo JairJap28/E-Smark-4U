@@ -1,0 +1,30 @@
+.map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.map-frame {
+    height: 100%;
+}
+
+#map {
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 645px) {
+    .map-container {
+        height: 400px;
+        padding-bottom: 20px;
+    }
+}

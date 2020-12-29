@@ -1,0 +1,168 @@
+.contact__header {
+    width: 100%;
+    height: 50px;
+    background: rgb(36, 36, 36);
+    padding: 10px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    position: relative;
+}
+
+.contact__header .contact__tittle {
+    color: white;
+    text-align: center;
+}
+
+.contact__body {
+    display: flex;
+    height: calc(100vh - 260px);
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.contact__form {
+    flex: 1.2;
+    height: 100%;
+    padding: 20px;
+    padding-left: 0;
+    position: relative;
+}
+
+.contact__form::after,
+.contact__qr::after {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: rgb(36, 36, 36);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.4;
+}
+
+.contact__form .input-group {
+    margin-bottom: 10px;
+}
+
+.contact__qr {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    padding: 20px;
+}
+
+.contact__qr__info {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact__qr__info hr {
+    background: #41A8E8;
+    height: 3px !important;
+    margin: 5px;
+}
+
+.contact__qr>img {
+    max-width: 250px;
+}
+
+.contact__qr h3 {
+    font-size: 16px;
+}
+
+.contact__qr h5 {
+    color: gray;
+    font-size: 14px;
+}
+
+.contact__qr__networks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.contact__qr__networks a {
+    flex-grow: 1;
+    width: 48px;
+    padding: 5px;
+    transition: transform .8s ease-in-out;
+    text-align: center;
+}
+
+.contact__qr__networks a img {
+    width: 100%;
+    max-height: 75px;
+    max-width: 75px;
+}
+
+.contact__qr__networks a:hover {
+    border: 1px solid red;
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+.contact__map {
+    flex: 1.5;
+    height: 100%;
+    position: relative;
+}
+
+.contact__btn__sendMessage {
+    width: calc(100% - 20px);
+    background-color: #41A8E8 !important;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact__header {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 0;
+    }
+    .contact__body {
+        display: block;
+        margin-top: 5px;
+        padding-left: 0;
+        height: 100%;
+    }
+    .contact__form {
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .contact__form::after,
+    .contact__qr::after {
+        content: none;
+        display: none;
+    }
+    .contact__btn__sendMessage {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .contact__qr img {
+        width: 50%;
+    }
+    .contact__qr__info {
+        position: relative;
+        overflow: auto;
+    }
+    .contact__qr>div {
+        display: flex;
+        flex-direction: row;
+    }
+    .contact__map {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .contact__qr .contact__qrCode {
+        display: none;
+    }
+}

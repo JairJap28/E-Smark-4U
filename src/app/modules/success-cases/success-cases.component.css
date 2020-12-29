@@ -1,0 +1,97 @@
+.cases {
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+.cases h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.cases p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.cases__item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+hr {
+    color: #41A8E8;
+}
+
+.container button:hover {
+    background: #41A8E8 !important;
+    font-weight: bold;
+}
+
+.cases__item hr {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.cases__showMore {
+    text-align: end;
+}
+
+.cases__company {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.cases__company__contact {
+    background: #41A8E8 !important;
+    font-weight: bold;
+}
+
+.modal-header {
+    position: relative;
+}
+
+.close {
+    background: red;
+    margin: 0;
+    opacity: .6;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.cases__company__body {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.cases__company__next {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+.cases__company__previous {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .cases {
+        width: 100%;
+    }
+}
