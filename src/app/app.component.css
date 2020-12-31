@@ -1,6 +1,15 @@
+/* .app {
+    position: relative;
+} */
+
 .app__header {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 .app__header img {
@@ -16,10 +25,12 @@
 .app__content {
     width: 80%;
     margin: 40px auto;
+    margin-top: 70px;
+    position: relative;
 }
 
 .faq__btn {
-    position: absolute;
+    position: fixed;
     right: -40px;
     top: 40%;
 }
@@ -41,11 +52,16 @@
     }
     .app__header app-header {
         width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .app-faq {
         display: none;
     }
     .app__content {
         width: 95%;
+    }
+    .header__content__responsive {
+        margin-top: 280px;
     }
 }

@@ -13,8 +13,20 @@ export class ContactComponent implements OnInit {
   faAt = faAt;
   faPhone = faPhone;
   faPaperPlane = faPaperPlane;
+  classShake: any = { state: '', class: '' };
 
-  constructor() { }
+
+  constructor() {
+    this.TimeOut();
+  }
+
+  TimeOut(){
+    setTimeout(() => {
+      this.classShake.state = !this.classShake.state;
+      this.classShake.class = this.classShake.state ? "shake" : "";
+      this.TimeOut();
+    }, 8000);
+  }
 
   ngOnInit(): void {
   }

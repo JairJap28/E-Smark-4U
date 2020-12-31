@@ -26,14 +26,15 @@
             <div class="input-group">
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Mensaje"></textarea>
             </div>
-            <button type="button" class="btn btn-primary contact__btn__sendMessage">
+            <button type="button" class="btn btn-primary contact__btn__sendMessage home__btn__contactanos" [class]="classShake.class">
               <span>Dejanos contactarte</span>
+              <fa-icon [icon]="faPaperPlane" style="color: white;"></fa-icon>
             </button>
         </div>
     </div>
     <div class="contact__qr">
         <div>
-            <img src="../../../assets/qr.png" class="img-fluid contact__qrCode" alt="QR WhatsApp">
+            <img src="../../../assets/qr.png" class="img-fluid mx-auto d-block contact__qrCode" alt="QR WhatsApp">
             <div class="contact__qr__info">
                 <div>
                     <h3>Llamanos al:</h3>
@@ -55,7 +56,7 @@
                             <img src="../../../assets/InstagramIcon.png" alt="Instagram Icon" class="img-fluid">
                         </a>
                         <a href="https://api.whatsapp.com/message/6XL7PH75FHOPO1" target="_blank">
-                            <img src="../../../assets/whatsappIcon.jpg" alt="WhatsApp Icon" class="img-fluid">
+                            <img src="../../../assets/WhatsApp-Logotipo.png" alt="WhatsApp Icon" class="img-fluid">
                         </a>
                     </div>
                 </div>

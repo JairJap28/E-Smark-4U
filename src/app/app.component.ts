@@ -11,6 +11,14 @@ type MyWindow = (typeof window) & {
 })
 export class AppComponent implements OnInit {
   title = 'shoppingCampaings';
+
+  classCustomContent: string;
+
   ngOnInit(): void {
+  }
+
+  classClickMenu(event: string){
+    this.classCustomContent = event;
+    console.log(this.classCustomContent);
   }
 }
