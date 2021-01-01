@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate, query} from '@angular/animations';
+import { trigger, state, style, transition, animate, query, stagger} from '@angular/animations';
 import CaseEntity from './CaseEntity';
 import { faCaretRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const ShakeAnimation = [
-	style({ transform: 'rotate(0)' }),
-	animate('0.1s', style({ transform: 'rotate(2deg)' })),
-	animate('0.1s', style({ transform: 'rotate(-2deg)' })),
-	animate('0.1s', style({ transform: 'rotate(2deg)' })),
-	animate('0.1s', style({ transform: 'rotate(0)' })),
-];
-export const QueryShake = [
-	trigger('queryShake', [
-		transition('* => default', ShakeAnimation),
-	]),
-];
+const listAnimation = trigger('listAnimation', [
+  transition('* <=> *', [
+    query(':enter',
+      [style({ opacity: 0 }), stagger('300ms', animate('700ms ease-out', style({ opacity: 1 })))],
+      { optional: true }
+    ),
+    query(':leave',
+      animate('200ms', style({ opacity: 0 })),
+      { optional: true}
+    )
+  ])
+]);
 
 @Component({
   selector: 'app-success-cases',
@@ -27,7 +27,7 @@ export const QueryShake = [
         style({ transform: 'translateY(150%)' }),
         animate('1s 300ms ease-in')
       ])
-    ])
+    ]), listAnimation
   ]
 })
 export class SuccessCasesComponent implements OnInit {

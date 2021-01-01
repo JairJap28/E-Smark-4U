@@ -12,6 +12,9 @@ import { trigger, state, style, transition, animate} from '@angular/animations';
       transition(':enter', [
         style({ transform: 'translateX(-150%)' }),
         animate('1s 300ms ease-in')
+      ]),
+      transition(':leave', [
+        animate('200ms', style({ opacity: 0 })),
       ])
     ]),
     trigger('RightEnter', [
