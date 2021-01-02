@@ -8,6 +8,9 @@
 }
 
 .aboutUs__btn__contact button {
-    background-color: #41A8E8 !important;
     margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    background-color: #41A8E8 !important;
 }

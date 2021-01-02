@@ -2,17 +2,57 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-md-4 text-center" [@LeftEnter]="'enter'">
-            <img src="../../../assets/productOne.jpg" alt="Producto Uno" class="img-fluid">
-            <h4>Marketing Digital</h4>
+        <div class="col-xs-12 col-md-4 text-center products__item" @LeftEnter data-toggle="modal" data-target="#services" (click)="showProduct(services[0])">
+            <img [src]="services[0].img" [alt]="services[0].name" class="img-fluid">
+            <h4>{{ services[0].name }}</h4>
         </div>
-        <div class="col-xs-12 col-md-4 text-center" [@StaticAppear]="'enter'">
-            <img src="../../../assets/productTwo.png" alt="Producto Dos" class="img-fluid">
-            <h4>Promoción de productos y servicios a través de las Campañas inteligentes de Google</h4>
+        <div class="col-xs-12 col-md-4 text-center products__item" @StaticAppear data-toggle="modal" data-target="#services" (click)="showProduct(services[1])">
+            <img [src]="services[1].img" [alt]="services[2].name" class="img-fluid">
+            <h4>{{ services[1].name }}</h4>
         </div>
-        <div class="col-xs-12 col-md-4 text-center products__col3" [@RightEnter]="'enter'">
-            <img src="../../../assets/productThree.png" alt="Producto Tres" class="img-fluid">
-            <h4 class="products__card__title">Marketing tradicional</h4>
+        <div class="col-xs-12 col-md-4 text-center products__col3 products__item" @RightEnter data-toggle="modal" data-target="#services" (click)="showProduct(services[2])">
+            <img [src]="services[2].img" [alt]="services[2].name" class="img-fluid">
+            <h4>{{ services[2].name }}</h4>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="services" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">{{ producto?.name }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <fa-icon [icon]="faTimes" style="color: white;"></fa-icon>
+              </button>
+            </div>
+            <div class="modal-body cases__company__body">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-sm-12 col-md-6 cases__company">
+                            <img src={{producto?.img}} alt="company?.name" class="img-fluid">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            {{ producto?.description }}
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-secondary product__previous btn-block mt-3" (click)="showPreviousProduct()">
+                        <fa-icon [icon]="faCaretRight" style="color: white;"></fa-icon>
+                      </button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-secondary btn-block mt-3" (click)="showNextProduct()">
+                        <fa-icon [icon]="faCaretRight" style="color: white;" class="cases__btn__icon"></fa-icon>
+                      </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

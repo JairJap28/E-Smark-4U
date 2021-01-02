@@ -4,3 +4,72 @@
 body {
     overflow-x: hidden;
 }
+
+body::before {
+    content: '';
+    height: 100px;
+    width: 100%;
+    padding-top: 15%;
+    background: rgb(60, 128, 253);
+    -webkit-clip-path: polygon(100% 31%, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 31%, 0% 100%, 100% 100%);
+    margin-bottom: -1px;
+    position: fixed;
+    bottom: 0px;
+    opacity: .1;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    height: 400px;
+    width: 200px;
+    padding-top: 15%;
+    background: rgb(255, 208, 79);
+    -webkit-clip-path: polygon(40% 0, 0 0, 0 98%);
+    clip-path: polygon(40% 0, 0 0, 0 98%);
+    margin-bottom: -1px;
+    position: fixed;
+    top: 0px;
+    opacity: .1;
+    z-index: -1;
+}
+
+app-root {
+    position: relative;
+}
+
+.shake {
+    animation-name: shake-animation;
+    animation-duration: .5s;
+}
+
+@keyframes shake-animation {
+    10%,
+    90% {
+        transform: translate3d(-0.5px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-3px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(3px, 0, 0);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body::before {
+        bottom: 40px;
+    }
+    body::after {
+        width: 200px;
+        height: 150px;
+    }
+}

@@ -1,21 +1,20 @@
 <h2 class="mb-3 text-center">Quiénes Somos</h2>
 <div class="container">
     <div class="row align-items-center">
-        <div class="col-md-6 col-sm-12">
-            <p>
-                En E-Smark 4U, entendemos que el cambio no siempre es sencillo, es por ello que, desde el año 2020 hemos ayudado a PYMES a responder a los cambios de la industria para que puedan seguir siendo competitivas. Nuestros altos niveles de conocimientos en marketing
-                nos han enseñado a siempre hacer del éxito de su empresa nuestra prioridad.
-                <br><br> Nuestro principal objetivo es ayudar a las PYMES en Colombia a incrementar sus ventas y a que sean reconocidas en todo el país, esto lo logramos utilizando las últimas tecnologías relacionadas con las Campañas inteligentes de
-                Google, estas campañas se apoyan de machine learning para optimizar los anuncios concentrándose en aparecer en los resultados de búsqueda, y están hechas especialmente para pequeñas empresas.
-                <br><br> Nuestro equipo de expertos está preparado para ayudarle a desarrollar estrategias no sólo para sobrevivir sino para prosperar en el futuro. Llámenos hoy mismo para concertar una primera consulta.
+        <div class="col-md-6 col-sm-12" [@listAnimation]="aboutUsParagraphs.length">
+            <p *ngFor="let item of aboutUsParagraphs">
+                {{ item }} <br>
             </p>
         </div>
         <div class="col-md-6 col-sm-12">
-            <app-carousel></app-carousel>
-            <div class="aboutUs__btn__contact">
-                <button type="button" class="btn btn-primary btn-block btn-sm" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+            <div @imageAnimation>
+                <app-carousel></app-carousel>
+                <div class="aboutUs__btn__contact">
+                    <button type="button" class="btn btn-primary btn-block btn-sm" data-bs-toggle="modal" data-bs-target="#subscribeModal">
                 <span>Dejanos contactarte</span>
+                <fa-icon [icon]="faPaperPlane" style="color: white;"></fa-icon>
               </button>
+                </div>
             </div>
         </div>
     </div>

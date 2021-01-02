@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ShortDescriptionPipe } from './pipes/short-description.pipe';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../../environments/environment';
+import { AngularFireModule } from '@angular/fire';
 
 
 
@@ -11,7 +14,9 @@ import { ShortDescriptionPipe } from './pipes/short-description.pipe';
   declarations: [ShortDescriptionPipe],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
   ],
   exports: [ShortDescriptionPipe]
 })

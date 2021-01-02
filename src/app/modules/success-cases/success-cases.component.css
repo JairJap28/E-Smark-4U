@@ -1,6 +1,5 @@
 .cases {
     width: 600px;
-    margin-bottom: 50px;
 }
 
 .cases h2 {
@@ -18,8 +17,7 @@
     overflow: hidden;
 }
 
-.cases__item {
-    margin-top: 15px;
+.cases__item:last-child {
     margin-bottom: 15px;
 }
 

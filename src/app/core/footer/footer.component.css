@@ -14,3 +14,12 @@
     margin: 10px;
     font-weight: bold;
 }
+
+.footer__logo {
+    max-width: 96px;
+    max-height: 64px;
+    background-color: transparent;
+    border: none;
+    opacity: .8;
+    filter: grayscale(70%);
+}
