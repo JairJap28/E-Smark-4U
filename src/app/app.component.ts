@@ -11,7 +11,7 @@ type MyWindow = (typeof window) & {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'shoppingCampaings';
+  title = 'E-Smark 4U';
 
   classCustomContent: string;
 

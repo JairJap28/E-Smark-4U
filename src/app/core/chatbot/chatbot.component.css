@@ -1,0 +1,118 @@
+button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-color: transparent;
+    z-index: 5000;
+}
+
+.social__container {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 189px;
+    position: fixed;
+    bottom: 120px;
+    right: -40px;
+}
+
+.social__container button {
+    margin-bottom: 5px;
+    position: fixed;
+    right: -50px;
+}
+
+.social__like {
+    background-color: #41A8E8 !important;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+}
+
+.social__facebook img {
+    width: 26px;
+    height: 26px;
+}
+
+.social__whatsapp img {
+    width: 28px;
+}
+
+.social__instagram img {
+    width: 35px;
+    height: 35px;
+}
+
+button:hover {
+    background-color: lightgray !important;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.entranceOne {
+    animation: rightEntrance;
+    animation-delay: 200ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    bottom: 160px;
+}
+
+.entranceTwo {
+    animation: rightEntrance;
+    animation-delay: 300ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    bottom: 210px;
+}
+
+.entranceThree {
+    animation: rightEntrance;
+    animation-delay: 400ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    bottom: 260px;
+}
+
+.beat {
+    animation: beat;
+    animation-delay: 200ms;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.clicked,
+.clicked:hover {
+    background-color: rgb(158, 55, 55) !important;
+}
+
+@keyframes rightEntrance {
+    from {
+        right: -50px;
+    }
+    to {
+        right: 30px;
+    }
+}
+
+@keyframes leftOutput {
+    from {
+        right: 30px;
+    }
+    to {
+        right: -50px;
+    }
+}
+
+@keyframes beat {
+    0% {
+        font-size: 8px;
+    }
+    50% {
+        font-size: 20px;
+    }
+    100% {
+        font-size: 8px;
+    }
+}

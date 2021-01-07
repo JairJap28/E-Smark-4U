@@ -32,7 +32,7 @@
 .faq__btn {
     position: fixed;
     right: -40px;
-    top: 40%;
+    top: 30%;
 }
 
 .faq__icon {
@@ -44,6 +44,11 @@
     right: -20px;
     transition: transform 1.5s ease-in-out;
     cursor: pointer;
+}
+
+.app__social {
+    position: fixed;
+    right: 30px;
 }
 
 @media (max-width: 768px) {
