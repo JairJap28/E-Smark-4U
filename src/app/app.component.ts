@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   constructor(private realtimeDb: RealTimeDatabaseServiceService) {
     this.getSuccessCases();
     this.getServices();
+    this.getTrusthingOnUS();
   }
 
   ngOnInit(): void {
@@ -34,6 +35,13 @@ export class AppComponent implements OnInit {
     this.realtimeDb.getServices()
         .subscribe(data => {
           localStorage.setItem('Services', JSON.stringify(data));
+        });
+  }
+
+  getTrusthingOnUS() {
+    this.realtimeDb.getTrusthingOnUs()
+        .subscribe(data => {
+          localStorage.setItem('TrustingOnUs', JSON.stringify(data));
         });
   }
 
