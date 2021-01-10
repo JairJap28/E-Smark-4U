@@ -3,17 +3,21 @@ import { CommonModule } from '@angular/common';
 import { AboutUsComponent } from './about-us.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { OrganigramComponent } from './organigram/organigram.component';
+import { OrgChartModule } from 'ng2-org-chart';
 
 
 
 @NgModule({
   declarations: [
     AboutUsComponent,
-    CarouselComponent
+    CarouselComponent,
+    OrganigramComponent
   ],
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    OrgChartModule
   ],
   exports: [
     AboutUsComponent

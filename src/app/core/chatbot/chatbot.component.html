@@ -1,0 +1,15 @@
+<button class="social__like" [class]="open ? 'clicked' : 'beat'" (click)="showSocialNetworks()">
+  <fa-icon [icon]="iconMainButton" style="color: white;"></fa-icon>
+</button>
+
+<div class="social__container">
+    <Button class="social__whatsapp" [class]="open ? 'entranceThree' : ''" (click)="goToLink('https://api.whatsapp.com/message/6XL7PH75FHOPO1')">
+      <img src="../../../assets/Whatsapp.png" alt="Icono Whatsapp">
+    </Button>
+    <Button class="social__facebook" [class]="open ? 'entranceTwo' : ''" (click)="goToLink('https://www.facebook.com/ESmark4U')">
+      <img src="../../../assets/facebook.svg" alt="Icono Facebook"/>
+    </Button>
+    <Button class="social__instagram" [class]="open ? 'entranceOne' : ''" (click)="goToLink('https://www.instagram.com/e_smark_4u/')">
+      <img src="../../../assets/Instagram.svg" alt="Icono Instagram">
+    </Button>
+</div>

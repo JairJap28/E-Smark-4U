@@ -1,23 +1,36 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center">
-            <video controls>
+        <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center home__video">
+            <!-- <video controls>
           <source src="../../../assets/video.MP4" type="video/mp4">
-        </video>
+        </video> -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/s841LCFK3iM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="row">
-                <button type="button" class="btn btn-primary home__btn__contactanos" data-bs-toggle="modal" data-bs-target="#subscribeModal">
-                  <span>Dejanos contactarte</span>
-                  <fa-icon [icon]="faPaperPlane" style="color: white;"></fa-icon>
-                </button>
-            </div>
-            <div class="row">
                 <div class="home__description">
                     <h2>E-Smark 4U</h2>
-                    <p></p>
+                    <p>
+                        ¿Deseas incrementar tus ventas y no sabes cómo iniciar? ¡No te preocupes! Promocionamos tu PYME de forma ágil y eficaz a través de campañas inteligentes y marketing digital. ¡No permitas que la pandemia también te afecte a ti!
+                        <br> Dulhan S.A.S y Delisorpresas ya se unieron ¡Únete tú también! ¡No lo dejes pasar!
+                    </p>
+                    <button type="button" class="btn btn-primary btn-block home__btn__contactanos" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+                      <span>Dejanos contactarte</span>
+                      <fa-icon [icon]="faPaperPlane" style="color: white;"></fa-icon>
+                    </button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row home__products">
+        <div class="col-xs-12 col-sm-6 col-md-4 text-center products__item">
+            <img [src]="services[0].img" [alt]="services[0].name" class="img-fluid">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 text-center products__item">
+            <img [src]="services[1].img" [alt]="services[2].name" class="img-fluid">
+        </div>
+        <div class="col-xs-12 col-md-4 text-center products__col3 products__item">
+            <img [src]="services[2].img" [alt]="services[2].name" class="img-fluid">
         </div>
     </div>
 </div>

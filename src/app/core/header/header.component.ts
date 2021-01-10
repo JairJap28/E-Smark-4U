@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements OnInit {
 
   faBars = faBars;
+  faHome = faHome;
   open: boolean = false;
   classResponsive: string;
 

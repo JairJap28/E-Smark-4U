@@ -14,14 +14,14 @@
                             <div class="input-group-text">
                                 <fa-icon [icon]="faUser" style="color: gray;"></fa-icon>
                             </div>
-                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Rachel Beltran">
+                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Rachel Beltran" [(ngModel)]="name" name="name" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="inputName" class="form-label">Correo electonico</label>
                         <div class="input-group">
                             <div class="input-group-text">@</div>
-                            <input type="email" class="form-control" id="autoSizingInputGroup" placeholder="Example@esmark.com">
+                            <input type="email" class="form-control" id="autoSizingInputGroup" placeholder="Example@esmark.com" [(ngModel)]="email" name="email" required>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -30,7 +30,7 @@
                             <div class="input-group-text">
                                 <fa-icon [icon]="faPhone" style="color: gray;"></fa-icon>
                             </div>
-                            <input type="number" class="form-control" id="autoSizingInputGroup" placeholder="555-555-5555">
+                            <input type="number" class="form-control" id="autoSizingInputGroup" placeholder="555-555-5555" [(ngModel)]="phone" name="phone" required>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -42,14 +42,14 @@
                     </div>
                     <div class="col-md-6">
                         <label for="inputState" class="form-label">Ciudad</label>
-                        <select id="inputState" class="form-select">
+                        <select id="inputState" class="form-select" (change)="changeCity($event.target.value)">
                           <option selected>Otro</option>
                           <option *ngFor="let item of listCities">{{item}}</option>
                         </select>
                     </div>
                     <div class="col-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" [(ngModel)]="whatsapp" name="whatsapp" required>
                             <label class="form-check-label" for="gridCheck">
                           ¿Te gustaría que te contactemos por WhatsApp?
                         </label>
@@ -59,7 +59,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary dialog__btn__subscribe" data-bs-dismiss="modal">Suscribirme</button>
+                <button type="button" class="btn btn-primary dialog__btn__subscribe" data-bs-dismiss="modal" (click)="subscribe()">Suscribirme</button>
             </div>
         </div>
     </div>

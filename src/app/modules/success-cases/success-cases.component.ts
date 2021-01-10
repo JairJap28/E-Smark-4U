@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate, query, stagger} from '@angular/animations';
 import CaseEntity from './CaseEntity';
-import { faCaretRight, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCaretRight, faTimes, faSortDown } from '@fortawesome/free-solid-svg-icons';
 import { RealTimeDatabaseServiceService } from '../../shared/services/real-time-database-service.service';
 import { Observable } from 'rxjs';
 
@@ -34,10 +34,13 @@ const listAnimation = trigger('listAnimation', [
 })
 export class SuccessCasesComponent implements OnInit {
   faCaretRight = faCaretRight;
+  faSortDown = faSortDown;
   faTimes = faTimes;
 
   listCompanies: CaseEntity[] = [];
+  listTrusthingOnUs: CaseEntity[] = [];
   public company: CaseEntity;
+  video: string;
 
   constructor() {
     this.getSuccessCases();
@@ -48,6 +51,7 @@ export class SuccessCasesComponent implements OnInit {
 
   getSuccessCases() {
     this.listCompanies = JSON.parse(localStorage.getItem('SuccessCases'));
+    this.listTrusthingOnUs = JSON.parse(localStorage.getItem('TrustingOnUs'));
   }
 
   showCompany(company: CaseEntity): void{
@@ -64,5 +68,13 @@ export class SuccessCasesComponent implements OnInit {
     let index = this.listCompanies.findIndex(item => item.name == this.company.name) - 1;
     if(index < 0) index = this.listCompanies.length - 1;
     this.company = this.listCompanies[index];
+  }
+
+  showVideo(url: string){
+    this.video = url;
+  }
+
+  contactCompany(url: string) {
+    window.open(url, "_blank")
   }
 }

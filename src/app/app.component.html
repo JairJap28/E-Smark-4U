@@ -1,6 +1,6 @@
 <div class="app__header">
     <app-header (outputClass)="classClickMenu($event)"></app-header>
-    <img src="../assets/Logo.jpg" />
+    <img src="../assets/Logo2.png" alt="Logo E-Smark 4U" />
 </div>
 <div class="app__content" [class]="classCustomContent">
     <router-outlet></router-outlet>
@@ -9,6 +9,8 @@
   <img src="../assets/faq.png" alt="FAQ Questions" class="faq__icon"/>
 </button>
 <app-faq></app-faq>
-<app-chatbot></app-chatbot>
+<div class="app__social">
+    <app-chatbot></app-chatbot>
+</div>
 <app-subscribe-dialog></app-subscribe-dialog>
 <app-footer></app-footer>

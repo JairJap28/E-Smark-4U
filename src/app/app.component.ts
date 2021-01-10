@@ -11,13 +11,14 @@ type MyWindow = (typeof window) & {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'shoppingCampaings';
+  title = 'E-Smark 4U';
 
   classCustomContent: string;
 
   constructor(private realtimeDb: RealTimeDatabaseServiceService) {
     this.getSuccessCases();
     this.getServices();
+    this.getTrusthingOnUS();
   }
 
   ngOnInit(): void {
@@ -34,6 +35,13 @@ export class AppComponent implements OnInit {
     this.realtimeDb.getServices()
         .subscribe(data => {
           localStorage.setItem('Services', JSON.stringify(data));
+        });
+  }
+
+  getTrusthingOnUS() {
+    this.realtimeDb.getTrusthingOnUs()
+        .subscribe(data => {
+          localStorage.setItem('TrustingOnUs', JSON.stringify(data));
         });
   }
 

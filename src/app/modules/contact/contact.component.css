@@ -58,9 +58,9 @@
 }
 
 .contact__qr__info {
-    position: relative;
+    position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 90%;
 }
 
 .contact__qr__info hr {
@@ -181,11 +181,58 @@
     }
 }
 
+@media (min-width: 770px) and (max-height: 586px) {
+    .contact__qrCode {
+        max-width: 90px;
+    }
+    #exampleFormControlTextarea1 {
+        height: 20px;
+    }
+}
+
+@media (min-height: 586px) and (max-height: 719px) {
+    .contact__qrCode {
+        max-width: 120px;
+    }
+}
+
+@media (min-width: 1200px) and (max-height: 726px) {
+    .contact__qrCode {
+        max-width: 130px;
+    }
+    #exampleFormControlTextarea1 {
+        height: 150px;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 670px) {
+    .contact__qrCode {
+        max-width: 180px;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 775px) {
+    .contact__qrCode {
+        max-width: 100%;
+    }
+}
+
 @media only screen and (max-width: 450px) {
     .contact__qr {
         padding-top: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
         padding-left: 0;
+    }
+    .contact__qrCode {
+        max-width: 250px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .contact__qrCode {
+        max-width: 100px;
+        max-height: 100px;
+        margin-top: 50px;
     }
 }

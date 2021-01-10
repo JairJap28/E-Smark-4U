@@ -27,6 +27,7 @@
     "firebase": "^8.2.1",
     "jquery": "^3.5.1",
     "leaflet": "^1.7.1",
+    "ng2-org-chart": "^1.1.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

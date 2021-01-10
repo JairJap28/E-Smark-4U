@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaqComponent } from './faq/faq.component';
 import { SubscribeDialogComponent } from './subscribe-dialog/subscribe-dialog.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
   imports: [
     CommonModule,
     RouterModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
