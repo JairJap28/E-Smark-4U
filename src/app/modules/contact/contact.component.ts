@@ -2,6 +2,8 @@ import { style, animate, trigger, transition } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 import { faUser, faAt, faPhone, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import ContactEntity from './ContactEntity';
+import { RealTimeDatabaseServiceService } from '../../shared/services/real-time-database-service.service';
 
 const ShakeAnimation = [
 	style({ transform: 'rotate(0)' }),
@@ -31,9 +33,20 @@ export class ContactComponent implements OnInit {
   faPaperPlane = faPaperPlane;
   classShake: any = { state: '', class: '' };
 
+  contact: ContactEntity;
 
-  constructor() {
+  constructor(private db: RealTimeDatabaseServiceService) {
     this.TimeOut();
+    this.initData();
+  }
+
+  initData(){
+    this.contact = {
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    }
   }
 
   TimeOut(){
@@ -47,4 +60,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  saveContact(){
+    this.db.saveContact(this.contact);
+    this.initData();
+  }
 }

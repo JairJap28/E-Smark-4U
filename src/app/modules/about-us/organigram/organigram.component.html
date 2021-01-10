@@ -1,0 +1,16 @@
+<h2 class="mt-5 text-center">Nuestro Equipo de Trabajo</h2>
+<p text-center>Apoyandonos en la metodología Scrum, nuestro equipo entrega productos de la mejor calidad en el menor tiempo posible.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 mt-3" *ngFor="let item of team">
+            <div class="team__card">
+                <fa-icon [icon]="faTrophy" style="color: #EFB810;" class="team__icon"></fa-icon>
+                <div class="team__cardImage">
+                    <img [src]="item.img" [alt]="item.name">
+                </div>
+                <h4>{{item.name}}</h4>
+                <h5>{{item.position}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

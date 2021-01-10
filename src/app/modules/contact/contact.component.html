@@ -6,27 +6,27 @@
     <div class="contact__form">
         <div>
             <div class="input-group">
-                <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nombre">
+                <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nombre" [(ngModel)]="contact.name" name="name">
                 <div class="input-group-text">
                     <fa-icon [icon]="faUser" style="color: gray;"></fa-icon>
                 </div>
             </div>
             <div class="input-group">
-                <input type="email" class="form-control" id="autoSizingInputGroup" placeholder="Email">
+                <input type="email" class="form-control" id="autoSizingInputGroup" placeholder="Email" [(ngModel)]="contact.email" name="email">
                 <div class="input-group-text">
                     <fa-icon [icon]="faAt" style="color: gray;"></fa-icon>
                 </div>
             </div>
             <div class="input-group">
-                <input type="number" class="form-control" id="autoSizingInputGroup" placeholder="Telefono">
+                <input type="number" class="form-control" id="autoSizingInputGroup" placeholder="Telefono" [(ngModel)]="contact.phone" name="phone">
                 <div class="input-group-text">
                     <fa-icon [icon]="faPhone" style="color: gray;"></fa-icon>
                 </div>
             </div>
             <div class="input-group">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Mensaje"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Mensaje" [(ngModel)]="contact.message" name="message"></textarea>
             </div>
-            <button type="button" class="btn btn-primary contact__btn__sendMessage home__btn__contactanos" [class]="classShake.class">
+            <button type="button" class="btn btn-primary contact__btn__sendMessage home__btn__contactanos" [class]="classShake.class" (click)="saveContact()">
               <span>Dejanos contactarte</span>
               <fa-icon [icon]="faPaperPlane" style="color: white;"></fa-icon>
             </button>
