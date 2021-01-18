@@ -11,6 +11,8 @@ import { AboutUsModule } from './modules/about-us/about-us.module';
 import { ProductsModule } from './modules/products/products.module';
 import { SuccessCasesModule } from './modules/success-cases/success-cases.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
