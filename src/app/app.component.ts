@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
 import { RealTimeDatabaseServiceService } from './shared/services/real-time-database-service.service';
 
 type MyWindow = (typeof window) & {
@@ -15,13 +16,23 @@ export class AppComponent implements OnInit {
 
   classCustomContent: string;
 
-  constructor(private realtimeDb: RealTimeDatabaseServiceService) {
+  constructor(private realtimeDb: RealTimeDatabaseServiceService, private swUpdate: SwUpdate) {
     this.getSuccessCases();
     this.getServices();
     this.getTrusthingOnUS();
   }
 
   ngOnInit(): void {
+    if (this.swUpdate.isEnabled) {
+
+      this.swUpdate.available.subscribe(() => {
+
+          if(confirm("Hay una nueva versión disponible. ¿Desea cargar la nueva versión?")) {
+
+              window.location.reload();
+          }
+      });
+  }
   }
 
   getSuccessCases() {
