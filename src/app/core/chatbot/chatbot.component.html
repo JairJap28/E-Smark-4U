@@ -3,6 +3,9 @@
 </button>
 
 <div class="social__container">
+    <Button class="social__download" [class]="open ? 'entranceFour' : ''" (click)="openModalDownload()">
+      <fa-icon [icon]="faDownload" style="color: black;"></fa-icon>
+    </Button>
     <Button class="social__whatsapp" [class]="open ? 'entranceThree' : ''" (click)="goToLink('https://api.whatsapp.com/message/6XL7PH75FHOPO1')">
       <img src="../../../assets/Whatsapp.png" alt="Icono Whatsapp">
     </Button>

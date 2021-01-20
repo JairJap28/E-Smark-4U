@@ -19,7 +19,7 @@
 
 <body>
     <app-root></app-root>
-    <pwa-install manifestpath="manifest.webmanifest">
+    <pwa-install id="installComponent" manifestpath="manifest.webmanifest" usecustom="true" installbuttontext="Instalar" iosinstallinfotext="Instalar" explainer="Esta es una aplicación Web desarrollada con el fin de brindarle un mayor soporte a los cliente de E-Smark 4U.">
     </pwa-install>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -34,6 +34,13 @@
             mf.src = "//cdn.mouseflow.com/projects/aede3356-e5f0-4ef7-a668-8ec593c592ab.js";
             document.getElementsByTagName("head")[0].appendChild(mf);
         })();
+    </script>
+
+    <script async defer>
+        function openModal() {
+            const ref = document.getElementById("installComponent");
+            ref.openPrompt();
+        }
     </script>
 </body>
 

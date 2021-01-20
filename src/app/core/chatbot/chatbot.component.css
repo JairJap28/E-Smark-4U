@@ -75,6 +75,14 @@ button:focus {
     bottom: 260px;
 }
 
+.entranceFour {
+    animation: rightEntrance;
+    animation-delay: 500ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    bottom: 310px;
+}
+
 .beat {
     animation: beat;
     animation-delay: 200ms;

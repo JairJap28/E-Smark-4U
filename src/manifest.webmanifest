@@ -9,7 +9,57 @@
     "start_url": "./",
     "orientation": "any",
     "lang": "",
-    "screenshots": [],
+    "screenshots": [{
+            "src": "assets/screens/screen1.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/screens/screen2.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/screens/screen3.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/screens/screen4.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/screens/screen5.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/screens/screen6.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/screens/screen7.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/screens/screen8.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/screens/screen9.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/screens/screen10.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        }
+    ],
     "url": "https://esmark4u.web.app",
     "icons": [{
             "src": "assets/icons/icon-72x72.png",
