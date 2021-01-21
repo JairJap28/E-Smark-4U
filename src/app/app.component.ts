@@ -58,6 +58,5 @@ export class AppComponent implements OnInit {
 
   classClickMenu(event: string){
     this.classCustomContent = event;
-    console.log(this.classCustomContent);
   }
 }

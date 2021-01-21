@@ -13,15 +13,13 @@ export class LoginComponent implements OnInit {
   state: number = 0;
   constructor(private db: LoginService, private router: Router) {
     let isLoged: Boolean = Boolean(JSON.parse(localStorage.getItem('loged')));
-    if(isLoged) this.router.navigate(['Stats']);
+    if(isLoged) this.router.navigate(['/Stats', 'bar-chart']);
   }
 
   ngOnInit(): void {
   }
 
   login(){
-    console.log(this.user);
-    console.log(this.password);
     this.db.login(this.user, this.password).subscribe(data => {
       if(data.length == 0){
         this.state = 2;
@@ -35,7 +33,6 @@ export class LoginComponent implements OnInit {
           window.location.reload();
         }, 1000);
         localStorage.setItem('loged', 'true');
-        console.log(data);
       }
     })
   }
