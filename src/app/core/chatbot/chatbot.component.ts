@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { faThumbsUp, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faTimes, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 type MyWindow = (typeof window) & {
   kommunicate: any;
@@ -14,6 +14,7 @@ type MyWindow = (typeof window) & {
 export class ChatbotComponent implements OnInit {
 
   faThumbsUp = faThumbsUp;
+  faDownload = faDownload;
   open:boolean = true;
   iconMainButton: any;
 
@@ -31,5 +32,10 @@ export class ChatbotComponent implements OnInit {
 
   goToLink(url: string){
       window.open(url, "_blank");
+  }
+
+  openModalDownload(){
+    const ref: any = document.getElementById("installComponent");
+      ref.openPrompt();
   }
 }

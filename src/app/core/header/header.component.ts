@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { faBars, faHome } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,11 +14,14 @@ export class HeaderComponent implements OnInit {
   faHome = faHome;
   open: boolean = false;
   classResponsive: string;
+  loged: boolean = false;
 
   @Output()
   outputClass = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.loged = Boolean(JSON.parse(localStorage.getItem('loged')));
+  }
 
   ngOnInit(): void {
   }
@@ -29,4 +33,9 @@ export class HeaderComponent implements OnInit {
     this.outputClass.emit(this.classResponsive);
   }
 
+  logOut(){
+    this.loged = false;
+    localStorage.setItem('loged', 'false');
+    this.router.navigate(['Home']);
+  }
 }

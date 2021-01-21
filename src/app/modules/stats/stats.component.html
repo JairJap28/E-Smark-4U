@@ -1,0 +1,19 @@
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['Stats','bar-chart']">Bar Chart</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['Stats','doughnut-chart']">Doughnut Chart</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['Stats','radar-chart']">Radar Chart</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['Stats','pie-chart']">Pie Chart</a>
+        </li>
+    </ul>
+    <div class="mt-3">
+        <router-outlet></router-outlet>
+    </div>
+</div>
