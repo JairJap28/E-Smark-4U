@@ -9,9 +9,9 @@
             <div class="modal-body">
                 <div id="accordion">
                     <div class="card" *ngFor="let item of listQuestions, let i=index">
-                        <div class="card-header" id="headingOne">
+                        <div class="card-header" [id]="'headingOne' + i">
                             <h5 class="mb-0">
-                                <button class="btn" data-toggle="collapse" [attr.data-target]="'#' + item.id" aria-expanded="false">
+                                <button class="btn" data-toggle="collapse" [attr.data-target]="'#' + item.id" aria-expanded="false" aria-label="Collapse Icon">
                                   {{ item.question }}
                                 </button>
                             </h5>

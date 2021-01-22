@@ -1,11 +1,11 @@
 <div class="app__header">
     <app-header (outputClass)="classClickMenu($event)"></app-header>
-    <img src="../assets/Logo2.png" alt="Logo E-Smark 4U" />
+    <img src="../assets/Logo2.webp" alt="Logo E-Smark 4U" />
 </div>
 <div class="app__content" [class]="classCustomContent">
     <router-outlet></router-outlet>
 </div>
-<button type="button" class="btn btn-outlined faq__btn" data-bs-toggle="modal" data-bs-target="#faqModal">
+<button type="button" class="btn btn-outlined faq__btn" data-bs-toggle="modal" data-bs-target="#faqModal" aria-label="FQA Icon">
   <img src="../assets/faq.png" alt="FAQ Questions" class="faq__icon"/>
 </button>
 <app-faq></app-faq>

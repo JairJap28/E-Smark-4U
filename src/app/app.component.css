@@ -49,6 +49,7 @@
 .app__social {
     position: fixed;
     right: 30px;
+    z-index: 1000 !important;
 }
 
 @media (max-width: 768px) {

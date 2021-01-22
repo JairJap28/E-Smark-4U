@@ -23,7 +23,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">{{ producto?.name }}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-label="close button">
                 <fa-icon [icon]="faTimes" style="color: white;"></fa-icon>
               </button>
             </div>
@@ -41,12 +41,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-6">
-                            <button type="button" class="btn btn-secondary product__previous btn-block mt-3" (click)="showPreviousProduct()">
+                            <button type="button" class="btn btn-secondary product__previous btn-block mt-3" (click)="showPreviousProduct()" aria-label="Show products">
                         <fa-icon [icon]="faCaretRight" style="color: white;"></fa-icon>
                       </button>
                         </div>
                         <div class="col-6">
-                            <button type="button" class="btn btn-secondary btn-block mt-3" (click)="showNextProduct()">
+                            <button type="button" class="btn btn-secondary btn-block mt-3" (click)="showNextProduct()" aria-label="Show next product">
                         <fa-icon [icon]="faCaretRight" style="color: white;" class="cases__btn__icon"></fa-icon>
                       </button>
                         </div>

@@ -26,7 +26,7 @@
             <div class="input-group">
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Mensaje" [(ngModel)]="contact.message" name="message"></textarea>
             </div>
-            <button type="button" class="btn btn-primary contact__btn__sendMessage home__btn__contactanos" [class]="classShake.class" (click)="saveContact()">
+            <button type="button" class="btn btn-primary contact__btn__sendMessage home__btn__contactanos" [class]="classShake.class" (click)="saveContact()" aria-label="Save contact">
               <span>Dejanos contactarte</span>
               <fa-icon [icon]="faPaperPlane" style="color: white;"></fa-icon>
             </button>

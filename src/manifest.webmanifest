@@ -10,54 +10,54 @@
     "orientation": "any",
     "lang": "",
     "screenshots": [{
-            "src": "assets/screens/screen1.png",
+            "src": "assets/screens/screen1.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         },
         {
-            "src": "assets/screens/screen2.png",
+            "src": "assets/screens/screen2.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         },
         {
-            "src": "assets/screens/screen3.png",
+            "src": "assets/screens/screen3.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         },
         {
-            "src": "assets/screens/screen4.png",
+            "src": "assets/screens/screen4.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         },
         {
-            "src": "assets/screens/screen5.png",
+            "src": "assets/screens/screen5.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         },
         {
-            "src": "assets/screens/screen6.png",
+            "src": "assets/screens/screen6.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         },
         {
-            "src": "assets/screens/screen7.png",
+            "src": "assets/screens/screen7.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         },
         {
-            "src": "assets/screens/screen8.png",
+            "src": "assets/screens/screen8.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         },
         {
-            "src": "assets/screens/screen9.png",
+            "src": "assets/screens/screen9.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         },
         {
-            "src": "assets/screens/screen10.png",
+            "src": "assets/screens/screen10.webp",
             "sizes": "1280x720",
-            "type": "image/png"
+            "type": "image/webp"
         }
     ],
     "url": "https://esmark4u.web.app",
